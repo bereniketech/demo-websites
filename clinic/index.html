@@ -50,7 +50,9 @@
   <section id="hero" class="hero">
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__tag" id="heroTag">Trusted by 5,000+ Patients</p>
+      <p class="hero__tag" id="heroTag">
+        <i class="fa-solid fa-shield-halved"></i> Trusted by 5,000+ Patients
+      </p>
       <h1 class="hero__headline" id="heroHeadline">Trusted Care for<br />Your Family</h1>
       <p class="hero__sub" id="heroSub">Book a consultation with our experienced doctors today.</p>
       <a href="#booking" class="btn-accent hero__cta" id="heroCta">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
@@ -62,22 +64,51 @@
     <div class="container">
       <div class="doctor__inner" data-animate>
         <div class="doctor__photo-wrap">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80"
-               alt="Dr. Anjali Mehta" class="doctor__photo" loading="lazy" />
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80"
+            alt="Dr. Anjali Mehta — General Medicine & Dermatology"
+            class="doctor__photo"
+            loading="lazy"
+          />
+          <div class="doctor__badge">
+            <i class="fa-solid fa-star"></i> Top Rated 2024
+          </div>
         </div>
+
         <div class="doctor__info">
           <span class="section-label">Meet Your Doctor</span>
-          <h2>Dr. Anjali Mehta</h2>
+          <h2 class="doctor__name">Dr. Anjali Mehta</h2>
           <p class="doctor__qual">MBBS, MD — General Medicine & Dermatology</p>
+
           <div class="doctor__tags">
-            <span class="tag">15+ Years Experience</span>
-            <span class="tag">General Medicine</span>
-            <span class="tag">Skin Care</span>
+            <span class="tag"><i class="fa-solid fa-check"></i> 15+ Years Experience</span>
+            <span class="tag"><i class="fa-solid fa-check"></i> General Medicine</span>
+            <span class="tag"><i class="fa-solid fa-check"></i> Skin Care</span>
           </div>
+
+          <div class="doctor__stats">
+            <div class="stat">
+              <strong>5,000+</strong>
+              <span>Patients Treated</span>
+            </div>
+            <div class="stat">
+              <strong>15+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="stat">
+              <strong>98%</strong>
+              <span>Satisfaction Rate</span>
+            </div>
+          </div>
+
           <blockquote class="doctor__quote">
-            "Providing compassionate, evidence-based care to families since 2009. Your health is my mission."
+            "Providing compassionate, evidence-based care to families since 2009.
+             Your health is my mission — I take time to listen before I prescribe."
           </blockquote>
-          <a href="#booking" class="btn-primary">Book a Consultation</a>
+
+          <a href="#booking" class="btn-primary">
+            Book a Consultation <i class="fa-solid fa-calendar-check"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -88,23 +119,46 @@
     <div class="container">
       <p class="section-label text-center">What We Offer</p>
       <h2 class="section-title text-center">Our Services</h2>
-      <p class="section-subtitle text-center">Comprehensive healthcare solutions for every stage of life.</p>
+      <p class="section-subtitle text-center">
+        Comprehensive healthcare solutions for every stage of life — from routine check-ups to specialised treatments.
+      </p>
+
       <div class="card-grid">
+
         <div class="card service-card" data-animate>
-          <div class="service-card__icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <div class="service-card__icon">
+            <i class="fa-solid fa-stethoscope"></i>
+          </div>
           <h3>General Consultation</h3>
-          <p>Expert diagnosis for common illnesses and chronic conditions with personalised treatment plans.</p>
+          <p>Expert diagnosis for common illnesses and chronic conditions with personalised treatment plans tailored to you.</p>
+          <a href="#booking" class="service-card__link">
+            Book Now <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="card service-card" data-animate>
-          <div class="service-card__icon"><i class="fa-solid fa-spa"></i></div>
+
+        <div class="card service-card service-card--featured" data-animate>
+          <div class="service-card__badge">Most Popular</div>
+          <div class="service-card__icon">
+            <i class="fa-solid fa-spa"></i>
+          </div>
           <h3>Skin Treatment</h3>
-          <p>Advanced dermatology care for acne, pigmentation, eczema, and cosmetic skin concerns.</p>
+          <p>Advanced dermatology care for acne, pigmentation, eczema, and cosmetic skin concerns with proven results.</p>
+          <a href="#booking" class="service-card__link">
+            Book Now <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
+
         <div class="card service-card" data-animate>
-          <div class="service-card__icon"><i class="fa-solid fa-tooth"></i></div>
+          <div class="service-card__icon">
+            <i class="fa-solid fa-tooth"></i>
+          </div>
           <h3>Dental Care</h3>
-          <p>Comprehensive dental services from routine cleaning to cosmetic and restorative procedures.</p>
+          <p>Comprehensive dental services from routine cleaning to cosmetic and restorative procedures for lasting oral health.</p>
+          <a href="#booking" class="service-card__link">
+            Book Now <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -114,45 +168,59 @@
     <div class="container">
       <p class="section-label text-center">Easy Scheduling</p>
       <h2 class="section-title text-center">Book an Appointment</h2>
-      <p class="section-subtitle text-center">Fill in your details and we'll confirm your slot via WhatsApp.</p>
+      <p class="section-subtitle text-center">
+        Fill in your details and we'll confirm your slot via WhatsApp — usually within 15 minutes.
+      </p>
+
       <div class="form-card" data-animate>
         <form id="bookingForm" novalidate>
+
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" />
-              <span class="form-error" id="nameError">Please enter your name.</span>
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" autocomplete="name" />
+              <span class="form-error" id="nameError">Please enter your full name.</span>
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
-              <span class="form-error" id="phoneError">Please enter your phone number.</span>
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+              <span class="form-error" id="phoneError">Please enter a valid phone number.</span>
             </div>
           </div>
+
           <div class="form-row">
             <div class="form-group">
-              <label for="concern">Concern *</label>
+              <label for="concern">Your Concern <span class="required">*</span></label>
               <select id="concern" name="concern">
                 <option value="">Select your concern</option>
-                <option>General Consultation</option>
-                <option>Skin Issue</option>
-                <option>Dental</option>
-                <option>Other</option>
+                <option value="General Consultation">General Consultation</option>
+                <option value="Skin Issue">Skin Issue</option>
+                <option value="Dental">Dental</option>
+                <option value="Other">Other</option>
               </select>
               <span class="form-error" id="concernError">Please select a concern.</span>
             </div>
             <div class="form-group">
-              <label for="time">Preferred Time *</label>
+              <label for="time">Preferred Time <span class="required">*</span></label>
               <select id="time" name="time">
                 <option value="">Select a time slot</option>
-                <option>Morning 9am – 12pm</option>
-                <option>Afternoon 12pm – 5pm</option>
-                <option>Evening 5pm – 8pm</option>
+                <option value="Morning 9am – 12pm">Morning 9am – 12pm</option>
+                <option value="Afternoon 12pm – 5pm">Afternoon 12pm – 5pm</option>
+                <option value="Evening 5pm – 8pm">Evening 5pm – 8pm</option>
               </select>
               <span class="form-error" id="timeError">Please select a time slot.</span>
             </div>
           </div>
-          <button type="submit" class="btn-accent btn-full">Book Consultation <i class="fa-solid fa-arrow-right"></i></button>
+
+          <button type="submit" class="btn-accent btn-full">
+            Book Consultation <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p class="form-note">
+            <i class="fa-solid fa-lock"></i>
+            Your details are only shared with the clinic via WhatsApp. We never store your data.
+          </p>
+
         </form>
       </div>
     </div>

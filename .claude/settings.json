@@ -1,0 +1,31 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "env": {
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-6"
+  },
+  "disabledMcpjsonServers": [
+    "claude_ai_Gmail",
+    "claude_ai_Google_Calendar"
+  ],
+  "permissions": {
+    "deny": [
+      "Read(./node_modules/**)",
+      "Read(./**/node_modules/**)",
+      "Read(./.git/**)",
+      "Read(./dist/**)",
+      "Read(./build/**)",
+      "Read(./**/*.min.js)",
+      "Read(./**/*.min.css)",
+      "Read(./**/*.map)",
+      "Read(./**/*.png)",
+      "Read(./**/*.jpg)",
+      "Read(./**/*.jpeg)",
+      "Read(./**/*.webp)",
+      "Read(./**/*.woff)",
+      "Read(./**/*.woff2)",
+      "Read(./**/*.ttf)",
+      "Read(./package-lock.json)"
+    ]
+  }
+}

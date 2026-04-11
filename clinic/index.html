@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediCare Clinic — Trusted Care for Your Family</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo"><i class="fa-solid fa-heart-pulse"></i> MediCare Clinic</a>
+      <ul class="nav__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">About</a></li>
+        <li><a href="#location">Contact</a></li>
+      </ul>
+      <a href="#booking" class="btn-accent nav__cta">Book Appointment</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile overlay -->
+    <div class="nav__overlay" id="navOverlay">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">About</a></li>
+        <li><a href="#location">Contact</a></li>
+        <li><a href="#booking" class="btn-accent">Book Appointment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__tag" id="heroTag">Trusted by 5,000+ Patients</p>
+      <h1 class="hero__headline" id="heroHeadline">Trusted Care for<br />Your Family</h1>
+      <p class="hero__sub" id="heroSub">Book a consultation with our experienced doctors today.</p>
+      <a href="#booking" class="btn-accent hero__cta" id="heroCta">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- DOCTOR PROFILE -->
+  <section id="doctor" class="section doctor">
+    <div class="container">
+      <div class="doctor__inner" data-animate>
+        <div class="doctor__photo-wrap">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80"
+               alt="Dr. Anjali Mehta" class="doctor__photo" loading="lazy" />
+        </div>
+        <div class="doctor__info">
+          <span class="section-label">Meet Your Doctor</span>
+          <h2>Dr. Anjali Mehta</h2>
+          <p class="doctor__qual">MBBS, MD — General Medicine & Dermatology</p>
+          <div class="doctor__tags">
+            <span class="tag">15+ Years Experience</span>
+            <span class="tag">General Medicine</span>
+            <span class="tag">Skin Care</span>
+          </div>
+          <blockquote class="doctor__quote">
+            "Providing compassionate, evidence-based care to families since 2009. Your health is my mission."
+          </blockquote>
+          <a href="#booking" class="btn-primary">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <p class="section-label text-center">What We Offer</p>
+      <h2 class="section-title text-center">Our Services</h2>
+      <p class="section-subtitle text-center">Comprehensive healthcare solutions for every stage of life.</p>
+      <div class="card-grid">
+        <div class="card service-card" data-animate>
+          <div class="service-card__icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>General Consultation</h3>
+          <p>Expert diagnosis for common illnesses and chronic conditions with personalised treatment plans.</p>
+        </div>
+        <div class="card service-card" data-animate>
+          <div class="service-card__icon"><i class="fa-solid fa-spa"></i></div>
+          <h3>Skin Treatment</h3>
+          <p>Advanced dermatology care for acne, pigmentation, eczema, and cosmetic skin concerns.</p>
+        </div>
+        <div class="card service-card" data-animate>
+          <div class="service-card__icon"><i class="fa-solid fa-tooth"></i></div>
+          <h3>Dental Care</h3>
+          <p>Comprehensive dental services from routine cleaning to cosmetic and restorative procedures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="booking" class="section booking">
+    <div class="container">
+      <p class="section-label text-center">Easy Scheduling</p>
+      <h2 class="section-title text-center">Book an Appointment</h2>
+      <p class="section-subtitle text-center">Fill in your details and we'll confirm your slot via WhatsApp.</p>
+      <div class="form-card" data-animate>
+        <form id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" />
+              <span class="form-error" id="nameError">Please enter your name.</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+              <span class="form-error" id="phoneError">Please enter your phone number.</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="concern">Concern *</label>
+              <select id="concern" name="concern">
+                <option value="">Select your concern</option>
+                <option>General Consultation</option>
+                <option>Skin Issue</option>
+                <option>Dental</option>
+                <option>Other</option>
+              </select>
+              <span class="form-error" id="concernError">Please select a concern.</span>
+            </div>
+            <div class="form-group">
+              <label for="time">Preferred Time *</label>
+              <select id="time" name="time">
+                <option value="">Select a time slot</option>
+                <option>Morning 9am – 12pm</option>
+                <option>Afternoon 12pm – 5pm</option>
+                <option>Evening 5pm – 8pm</option>
+              </select>
+              <span class="form-error" id="timeError">Please select a time slot.</span>
+            </div>
+          </div>
+          <button type="submit" class="btn-accent btn-full">Book Consultation <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <p class="section-label text-center">Patient Reviews</p>
+      <h2 class="section-title text-center">What Our Patients Say</h2>
+      <div class="testimonials__scroll" data-animate>
+        <div class="card testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Quick diagnosis, very professional. Felt at ease immediately. Dr. Anjali took the time to explain everything."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RS</div>
+            <div>
+              <strong>Ravi Sharma</strong>
+              <span>Verified Patient</span>
+            </div>
+          </div>
+        </div>
+        <div class="card testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Dr. Anjali explained everything clearly. The clinic is spotless and the staff is so kind. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PN</div>
+            <div>
+              <strong>Priya Nair</strong>
+              <span>Verified Patient</span>
+            </div>
+          </div>
+        </div>
+        <div class="card testimonial-card">
+          <div class="stars">★★★★☆</div>
+          <p>"Excellent skin treatment. Saw visible results in just 2 weeks. The follow-up care was exceptional too."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AP</div>
+            <div>
+              <strong>Arjun Patel</strong>
+              <span>Verified Patient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location" class="section location">
+    <div class="container">
+      <p class="section-label text-center">Find Us</p>
+      <h2 class="section-title text-center">Our Location</h2>
+      <div class="location__inner" data-animate>
+        <div class="location__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Clinic Location"></iframe>
+        </div>
+        <div class="location__info">
+          <div class="location__detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Address</strong>
+              <p>12, Health Avenue, Andheri West, Mumbai – 400053</p>
+            </div>
+          </div>
+          <div class="location__detail">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon – Sat: 9am – 8pm<br />Sunday: 10am – 2pm</p>
+            </div>
+          </div>
+          <div class="location__btns">
+            <a href="https://wa.me/919XXXXXXXXX?text=Hello%2C%20I%20need%20directions%20to%20MediCare%20Clinic."
+               class="btn-accent" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Chat with Us
+            </a>
+            <a href="tel:+919XXXXXXXXX" class="btn-primary">
+              <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="nav__logo footer__logo"><i class="fa-solid fa-heart-pulse"></i> MediCare Clinic</a>
+      <ul class="footer__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">About</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#location">Contact</a></li>
+      </ul>
+      <p class="footer__copy">© 2025 MediCare Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/919XXXXXXXXX?text=Hello%20MediCare%20Clinic!%20I'd%20like%20to%20book%20an%20appointment."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

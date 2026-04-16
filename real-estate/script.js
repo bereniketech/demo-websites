@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────
-   MediCare Clinic — script.js
+   LuxEstate — script.js
    All JS: GSAP animations, mobile nav, form logic
 ───────────────────────────────────────────── */
 
@@ -56,18 +56,18 @@ window.addEventListener('load', () => {
     })
   })
 
-  // ── 5. BOOKING FORM — Validation + WhatsApp Submit ──
-  const bookingForm = document.getElementById('bookingForm')
+  // ── 5. LEAD FORM — Validation + WhatsApp Submit ──
+  const leadForm = document.getElementById('leadForm')
 
-  if (bookingForm) {
+  if (leadForm) {
     const fields = [
-      { id: 'name',    errorId: 'nameError',    check: v => v.trim().length >= 2 },
-      { id: 'phone',   errorId: 'phoneError',   check: v => /^[\d\s\+\-\(\)]{7,15}$/.test(v.trim()) },
-      { id: 'concern', errorId: 'concernError', check: v => v !== '' },
-      { id: 'time',    errorId: 'timeError',    check: v => v !== '' },
+      { id: 'name',   errorId: 'nameError',   check: v => v.trim().length >= 2 },
+      { id: 'phone',  errorId: 'phoneError',  check: v => /^[\d\s\+\-\(\)]{7,15}$/.test(v.trim()) },
+      { id: 'budget', errorId: 'budgetError', check: v => v !== '' },
+      { id: 'area',   errorId: 'areaError',   check: v => v !== '' },
     ]
 
-    bookingForm.addEventListener('submit', e => {
+    leadForm.addEventListener('submit', e => {
       e.preventDefault()
       let valid = true
 
@@ -82,25 +82,24 @@ window.addEventListener('load', () => {
 
       if (!valid) return
 
-      const name    = document.getElementById('name').value.trim()
-      const phone   = document.getElementById('phone').value.trim()
-      const concern = document.getElementById('concern').value
-      const time    = document.getElementById('time').value
+      const name   = document.getElementById('name').value.trim()
+      const phone  = document.getElementById('phone').value.trim()
+      const budget = document.getElementById('budget').value
+      const area   = document.getElementById('area').value
 
       const message =
-        `Hello Dr. Anjali's Clinic! 🏥\n` +
-        `I'd like to book an appointment.\n\n` +
+        `Hello! I'm interested in properties. 🏠\n\n` +
         `Name: ${name}\n` +
         `Phone: ${phone}\n` +
-        `Concern: ${concern}\n` +
-        `Preferred Time: ${time}\n\n` +
-        `Please confirm my slot. Thank you!`
+        `Budget: ${budget}\n` +
+        `Preferred Area: ${area}\n\n` +
+        `Please share matching listings. Thank you!`
 
       buildWhatsApp('919XXXXXXXXX', message)
     })
 
     // Clear errors on input
-    bookingForm.querySelectorAll('input, select').forEach(input => {
+    leadForm.querySelectorAll('input, select').forEach(input => {
       input.addEventListener('input', () => {
         input.classList.remove('error')
         const err = document.getElementById(input.id + 'Error')
@@ -110,9 +109,17 @@ window.addEventListener('load', () => {
   }
 })
 
-// ── WHATSAPP HELPER ──
+// ── WHATSAPP HELPERS ──
 // All user values are passed through encodeURIComponent inside this function.
 // Never write raw user input to innerHTML.
+
+function enquireProperty(type, location, price) {
+  const message =
+    `Hi! I'm interested in the ${type} at ${location} (${price}). 🏡\n` +
+    `Can we schedule a site visit?`
+  buildWhatsApp('919XXXXXXXXX', message)
+}
+
 function buildWhatsApp(phone, message) {
   const encoded = encodeURIComponent(message)
   window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank', 'noopener,noreferrer')

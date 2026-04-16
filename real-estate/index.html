@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxEstate — Premium Properties in Mumbai</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo"><i class="fa-solid fa-building"></i> LuxEstate</a>
+      <ul class="nav__links">
+        <li><a href="#listings">Listings</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#agent-cta">Contact</a></li>
+      </ul>
+      <a href="#lead-form" class="btn-accent nav__cta">Get Listings</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile overlay -->
+    <div class="nav__overlay" id="navOverlay">
+      <ul>
+        <li><a href="#listings">Listings</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#agent-cta">Contact</a></li>
+        <li><a href="#lead-form" class="btn-accent">Get Listings</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__tag" id="heroTag">
+        <i class="fa-solid fa-crown"></i> Mumbai's #1 Property Consultants
+      </p>
+      <h1 class="hero__headline" id="heroHeadline">Find Your Dream<br />Home in Mumbai</h1>
+      <p class="hero__sub" id="heroSub">Premium apartments, villas & commercial spaces across Mumbai's finest localities.</p>
+      <a href="#lead-form" class="btn-accent hero__cta" id="heroCta">Get Property Listings <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- PROPERTY LISTINGS -->
+  <section id="listings" class="section listings">
+    <div class="container">
+      <p class="section-label text-center">Properties</p>
+      <h2 class="section-title text-center">Handpicked Listings</h2>
+      <p class="section-subtitle text-center">
+        Handpicked listings across Mumbai's most sought-after localities.
+      </p>
+
+      <div class="card-grid property-grid">
+
+        <!-- Card 1: 2BHK Malad West -->
+        <div class="card property-card" data-animate>
+          <div class="property-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="2BHK Apartment in Malad West" loading="lazy" />
+            <span class="property-card__tag">For Sale</span>
+          </div>
+          <div class="property-card__body">
+            <div class="property-card__price">₹85 Lakhs</div>
+            <h3 class="property-card__type">2BHK Apartment</h3>
+            <p class="property-card__location"><i class="fa-solid fa-location-dot"></i> Malad West, Mumbai</p>
+            <div class="property-card__meta">
+              <span><i class="fa-solid fa-ruler-combined"></i> 750 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 2 BHK</span>
+            </div>
+            <button class="btn-accent property-card__btn" onclick="enquireProperty('2BHK Apartment', 'Malad West', '₹85 Lakhs')">
+              View Details <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: 3BHK Goregaon East -->
+        <div class="card property-card" data-animate>
+          <div class="property-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80" alt="3BHK Apartment in Goregaon East" loading="lazy" />
+            <span class="property-card__tag">For Sale</span>
+          </div>
+          <div class="property-card__body">
+            <div class="property-card__price">₹1.4 Crore</div>
+            <h3 class="property-card__type">3BHK Apartment</h3>
+            <p class="property-card__location"><i class="fa-solid fa-location-dot"></i> Goregaon East, Mumbai</p>
+            <div class="property-card__meta">
+              <span><i class="fa-solid fa-ruler-combined"></i> 1100 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 3 BHK</span>
+            </div>
+            <button class="btn-accent property-card__btn" onclick="enquireProperty('3BHK Apartment', 'Goregaon East', '₹1.4 Crore')">
+              View Details <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: 4BHK Villa Andheri West -->
+        <div class="card property-card" data-animate>
+          <div class="property-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="4BHK Villa in Andheri West" loading="lazy" />
+            <span class="property-card__tag">For Sale</span>
+          </div>
+          <div class="property-card__body">
+            <div class="property-card__price">₹2.8 Crore</div>
+            <h3 class="property-card__type">4BHK Villa</h3>
+            <p class="property-card__location"><i class="fa-solid fa-location-dot"></i> Andheri West, Mumbai</p>
+            <div class="property-card__meta">
+              <span><i class="fa-solid fa-ruler-combined"></i> 2200 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 4 BHK</span>
+            </div>
+            <button class="btn-accent property-card__btn" onclick="enquireProperty('4BHK Villa', 'Andheri West', '₹2.8 Crore')">
+              View Details <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Studio Kandivali East -->
+        <div class="card property-card" data-animate>
+          <div class="property-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Studio Apartment in Kandivali East" loading="lazy" />
+            <span class="property-card__tag">For Sale</span>
+          </div>
+          <div class="property-card__body">
+            <div class="property-card__price">₹42 Lakhs</div>
+            <h3 class="property-card__type">Studio Apartment</h3>
+            <p class="property-card__location"><i class="fa-solid fa-location-dot"></i> Kandivali East, Mumbai</p>
+            <div class="property-card__meta">
+              <span><i class="fa-solid fa-ruler-combined"></i> 380 sq ft</span>
+              <span><i class="fa-solid fa-home"></i> Studio</span>
+            </div>
+            <button class="btn-accent property-card__btn" onclick="enquireProperty('Studio Apartment', 'Kandivali East', '₹42 Lakhs')">
+              View Details <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM -->
+  <section id="lead-form" class="section lead-form">
+    <div class="container">
+      <p class="section-label text-center">Get Personalised Listings</p>
+      <h2 class="section-title text-center">Tell Us What You're Looking For</h2>
+
+      <div class="form-card" data-animate>
+        <form id="leadForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Raj Kumar" autocomplete="name" />
+              <span class="form-error" id="nameError">Please enter your full name.</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+              <span class="form-error" id="phoneError">Please enter a valid phone number.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="budget">Budget Range <span class="required">*</span></label>
+              <select id="budget" name="budget">
+                <option value="">Select budget range</option>
+                <option value="Under ₹50L">Under ₹50L</option>
+                <option value="₹50L – ₹1Cr">₹50L – ₹1Cr</option>
+                <option value="₹1Cr – ₹2Cr">₹1Cr – ₹2Cr</option>
+                <option value="₹2Cr+">₹2Cr+</option>
+              </select>
+              <span class="form-error" id="budgetError">Please select a budget range.</span>
+            </div>
+            <div class="form-group">
+              <label for="area">Preferred Area <span class="required">*</span></label>
+              <select id="area" name="area">
+                <option value="">Select preferred area</option>
+                <option value="Malad">Malad</option>
+                <option value="Goregaon">Goregaon</option>
+                <option value="Andheri">Andheri</option>
+                <option value="Borivali">Borivali</option>
+                <option value="Kandivali">Kandivali</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="form-error" id="areaError">Please select a preferred area.</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-accent btn-full">
+            Get Personalised Listings <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p class="form-note">
+            <i class="fa-solid fa-lock"></i>
+            Your details are only shared via WhatsApp. We never store your data.
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROPERTIES -->
+  <section id="featured" class="section featured">
+    <div class="container">
+      <p class="section-label text-center">Curated Selections</p>
+      <h2 class="section-title text-center">Handpicked Just for You</h2>
+      <p class="section-subtitle text-center">
+        Our top recommendations for discerning buyers.
+      </p>
+
+      <div class="card-grid featured-grid">
+
+        <!-- Featured Card 1: 3BHK Goregaon East -->
+        <div class="card property-card featured-card" data-animate>
+          <div class="property-card__img-wrap">
+            <div class="property-card__featured-badge">★ Featured</div>
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80" alt="3BHK Apartment Featured" loading="lazy" />
+            <span class="property-card__tag">For Sale</span>
+          </div>
+          <div class="property-card__body">
+            <div class="property-card__price">₹1.4 Crore</div>
+            <h3 class="property-card__type">3BHK Apartment</h3>
+            <p class="property-card__location"><i class="fa-solid fa-location-dot"></i> Goregaon East, Mumbai</p>
+            <div class="property-card__meta">
+              <span><i class="fa-solid fa-ruler-combined"></i> 1100 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 3 BHK</span>
+            </div>
+            <button class="btn-accent property-card__btn" onclick="enquireProperty('3BHK Apartment', 'Goregaon East', '₹1.4 Crore')">
+              View Details <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured Card 2: 4BHK Villa Andheri West -->
+        <div class="card property-card featured-card" data-animate>
+          <div class="property-card__img-wrap">
+            <div class="property-card__featured-badge">★ Featured</div>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="4BHK Villa Featured" loading="lazy" />
+            <span class="property-card__tag">For Sale</span>
+          </div>
+          <div class="property-card__body">
+            <div class="property-card__price">₹2.8 Crore</div>
+            <h3 class="property-card__type">4BHK Villa</h3>
+            <p class="property-card__location"><i class="fa-solid fa-location-dot"></i> Andheri West, Mumbai</p>
+            <div class="property-card__meta">
+              <span><i class="fa-solid fa-ruler-combined"></i> 2200 sq ft</span>
+              <span><i class="fa-solid fa-bed"></i> 4 BHK</span>
+            </div>
+            <button class="btn-accent property-card__btn" onclick="enquireProperty('4BHK Villa', 'Andheri West', '₹2.8 Crore')">
+              View Details <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENT CTA STRIP -->
+  <section id="agent-cta" class="agent-cta">
+    <div class="container agent-cta__inner">
+      <div>
+        <h2>Ready to find your perfect property?</h2>
+        <p>Our agents are online now — get personalised guidance in minutes.</p>
+      </div>
+      <a href="https://wa.me/919XXXXXXXXX?text=Hi!%20I%27m%20looking%20for%20a%20property%20in%20Mumbai.%20Can%20you%20help?"
+         class="btn-dark" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i> Talk to Agent Now
+      </a>
+    </div>
+  </section>
+
+  <!-- AREAS SERVED -->
+  <section id="areas" class="section areas">
+    <div class="container">
+      <p class="section-label text-center">Coverage</p>
+      <h2 class="section-title text-center">Areas We Serve</h2>
+      <p class="section-subtitle text-center">
+        We have properties and expert agents across Mumbai's premium localities.
+      </p>
+
+      <div class="areas__pills" data-animate>
+        <span class="area-pill">Malad</span>
+        <span class="area-pill">Goregaon</span>
+        <span class="area-pill">Andheri</span>
+        <span class="area-pill">Borivali</span>
+        <span class="area-pill">Kandivali</span>
+        <span class="area-pill">Dahisar</span>
+      </div>
+
+      <div class="areas__map" data-animate>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%"
+          height="360"
+          style="border:0; border-radius: var(--radius);"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="LuxEstate Coverage Area — Mumbai">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="nav__logo footer__logo"><i class="fa-solid fa-building"></i> LuxEstate</a>
+      <ul class="footer__links">
+        <li><a href="#listings">Listings</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#lead-form">Contact</a></li>
+      </ul>
+      <p class="footer__copy">© 2025 LuxEstate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/919XXXXXXXXX?text=Hi%20LuxEstate!%20I%27m%20looking%20for%20a%20property%20in%20Mumbai."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

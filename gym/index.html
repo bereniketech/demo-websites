@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronEdge Gym — Transform Your Body in 90 Days</title>
+  <meta name="description" content="Science-backed training. Expert coaching. Real results — guaranteed." />
+
+  <!-- Google Fonts: Bebas Neue + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <div class="nav__logo">
+        <i class="fa-solid fa-dumbbell"></i> IronEdge Gym
+      </div>
+      <ul class="nav__links">
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#trainer">Trainers</a></li>
+        <li><a href="#transformations">Results</a></li>
+        <li><a href="#location">Contact</a></li>
+      </ul>
+      <a href="#booking" class="btn-accent">Start Free Trial</a>
+      <button class="nav__toggle" id="navToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__tag" id="heroTag">
+        <i class="fa-solid fa-fire"></i> 500+ Members Transformed
+      </p>
+      <h1 class="hero__headline" id="heroHeadline">
+        Transform Your Body<br />in 90 Days
+      </h1>
+      <p class="hero__sub" id="heroSub">
+        Science-backed training. Expert coaching. Real results — guaranteed.
+      </p>
+      <a href="#booking" class="btn-accent hero__cta" id="heroCta">
+        Start Free Trial <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Trainer Profile -->
+  <section id="trainer" class="section trainer">
+    <div class="container">
+      <div class="trainer__inner" data-animate>
+        <div class="trainer__photo-wrap">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80"
+               alt="Coach Rahul Singh" class="trainer__photo" loading="lazy" />
+          <div class="trainer__badge">
+            <i class="fa-solid fa-trophy"></i> ISSA Certified
+          </div>
+        </div>
+        <div class="trainer__info">
+          <span class="section-label">Your Coach</span>
+          <h2 class="trainer__name">Coach Rahul Singh</h2>
+          <p class="trainer__title">Strength & Conditioning Specialist</p>
+          <div class="trainer__tags">
+            <span class="tag"><i class="fa-solid fa-check"></i> 10+ Years Experience</span>
+            <span class="tag"><i class="fa-solid fa-check"></i> ISSA Certified</span>
+            <span class="tag"><i class="fa-solid fa-check"></i> 500+ Transformations</span>
+          </div>
+          <div class="trainer__stats">
+            <div class="stat">
+              <strong>500+</strong>
+              <span>Members Transformed</span>
+            </div>
+            <div class="stat">
+              <strong>10+</strong>
+              <span>Years Coaching</span>
+            </div>
+            <div class="stat">
+              <strong>98%</strong>
+              <span>Goal Achievement</span>
+            </div>
+          </div>
+          <blockquote class="trainer__quote">
+            "I don't just train bodies — I build mindsets. Every rep, every session brings you closer to the version of yourself you know you can be."
+          </blockquote>
+          <a href="#booking" class="btn-accent">
+            Train With Me <i class="fa-solid fa-dumbbell"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="section programs">
+    <div class="container">
+      <p class="section-label text-center">What We Train</p>
+      <h2 class="section-title text-center">Our Programs</h2>
+      <p class="section-subtitle text-center">Every program is built around your goal, your schedule, and your body.</p>
+      <div class="programs__grid">
+
+        <div class="program-card" data-animate>
+          <div class="program-card__icon"><i class="fa-solid fa-fire"></i></div>
+          <h3>Fat Loss</h3>
+          <p>Science-backed cardio and nutrition protocols for maximum, sustainable fat burn.</p>
+          <a href="#booking" class="program-card__link">Start Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="program-card program-card--featured" data-animate>
+          <div class="program-card__badge">Most Popular</div>
+          <div class="program-card__icon"><i class="fa-solid fa-dumbbell"></i></div>
+          <h3>Muscle Gain</h3>
+          <p>Progressive overload programming for serious hypertrophy, size and functional strength.</p>
+          <a href="#booking" class="program-card__link">Start Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="program-card" data-animate>
+          <div class="program-card__icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Strength Training</h3>
+          <p>Powerlifting-inspired training to build raw, functional strength from the ground up.</p>
+          <a href="#booking" class="program-card__link">Start Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="program-card" data-animate>
+          <div class="program-card__icon"><i class="fa-solid fa-user"></i></div>
+          <h3>Personal Training</h3>
+          <p>Fully tailored 1-on-1 coaching built around your unique body, goals, and lifestyle.</p>
+          <a href="#booking" class="program-card__link">Start Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking" class="section booking">
+    <div class="container">
+      <p class="section-label text-center">Get Started</p>
+      <h2 class="section-title text-center">Book Your Free Trial</h2>
+      <p class="section-subtitle text-center">
+        One free session. No commitment. Just show up and let the results speak.
+      </p>
+      <div class="form-card" data-animate>
+        <form id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Amit Kumar" />
+              <span class="form-error" id="nameError">Please enter your full name.</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+              <span class="form-error" id="phoneError">Please enter a valid phone number.</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="goal">Fitness Goal <span class="required">*</span></label>
+              <select id="goal" name="goal">
+                <option value="">Select your goal</option>
+                <option value="Fat Loss">Fat Loss</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Strength Training">Strength Training</option>
+                <option value="Personal Training">Personal Training</option>
+              </select>
+              <span class="form-error" id="goalError">Please select your fitness goal.</span>
+            </div>
+            <div class="form-group">
+              <label for="timing">Preferred Timing <span class="required">*</span></label>
+              <select id="timing" name="timing">
+                <option value="">Select a time slot</option>
+                <option value="Early Morning 5am – 8am">Early Morning 5am – 8am</option>
+                <option value="Morning 8am – 11am">Morning 8am – 11am</option>
+                <option value="Evening 5pm – 9pm">Evening 5pm – 9pm</option>
+              </select>
+              <span class="form-error" id="timingError">Please select a timing.</span>
+            </div>
+          </div>
+          <button type="submit" class="btn-accent btn-full">
+            Book Free Trial <i class="fa-solid fa-dumbbell"></i>
+          </button>
+          <p class="form-note">
+            <i class="fa-solid fa-lock"></i> No payment required. We'll confirm via WhatsApp.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Transformations -->
+  <section id="transformations" class="section transformations">
+    <div class="container">
+      <p class="section-label text-center">Proof It Works</p>
+      <h2 class="section-title text-center">Real Transformations</h2>
+      <p class="section-subtitle text-center">
+        These aren't stock photos. These are our members — before they started and 90 days later.
+      </p>
+      <div class="transformations__grid" data-animate>
+
+        <div class="transformation-card">
+          <div class="transformation-card__images">
+            <div class="ba-img">
+              <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&q=80" alt="Before" loading="lazy" />
+              <span class="ba-label ba-label--before">BEFORE</span>
+            </div>
+            <div class="ba-img">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&q=80" alt="After" loading="lazy" />
+              <span class="ba-label ba-label--after">AFTER</span>
+            </div>
+          </div>
+          <div class="transformation-card__info">
+            <strong>Amit K.</strong>
+            <span class="transformation-result">Lost 12kg in 90 Days</span>
+          </div>
+        </div>
+
+        <div class="transformation-card">
+          <div class="transformation-card__images">
+            <div class="ba-img">
+              <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=300&q=80" alt="Before" loading="lazy" />
+              <span class="ba-label ba-label--before">BEFORE</span>
+            </div>
+            <div class="ba-img">
+              <img src="https://images.unsplash.com/photo-1609899463726-4c89eb5c1e38?w=300&q=80" alt="After" loading="lazy" />
+              <span class="ba-label ba-label--after">AFTER</span>
+            </div>
+          </div>
+          <div class="transformation-card__info">
+            <strong>Sneha R.</strong>
+            <span class="transformation-result">Gained 6kg Muscle in 4 Months</span>
+          </div>
+        </div>
+
+        <div class="transformation-card">
+          <div class="transformation-card__images">
+            <div class="ba-img">
+              <img src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?w=300&q=80" alt="Before" loading="lazy" />
+              <span class="ba-label ba-label--before">BEFORE</span>
+            </div>
+            <div class="ba-img">
+              <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=300&q=80" alt="After" loading="lazy" />
+              <span class="ba-label ba-label--after">AFTER</span>
+            </div>
+          </div>
+          <div class="transformation-card__info">
+            <strong>Karan M.</strong>
+            <span class="transformation-result">28% → 14% Body Fat in 3 Months</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <p class="section-label text-center">What Members Say</p>
+      <h2 class="section-title text-center">Testimonials</h2>
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card" data-animate>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__text">
+            "Best decision I ever made. Coach Rahul doesn't let you make excuses — he helps you eliminate them."
+          </p>
+          <div class="author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <strong>Amit K.</strong>
+              <span>Member</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-animate>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-card__text">
+            "I was nervous to join. 3 months later I'm stronger than I've ever been. The women here are incredibly supportive."
+          </p>
+          <div class="author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <strong>Sneha R.</strong>
+              <span>Member</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-animate>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="testimonial-card__text">
+            "The programming is legit. No fluff, no gimmicks — just solid science-backed training that actually works."
+          </p>
+          <div class="author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <strong>Karan M.</strong>
+              <span>Member</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="section location">
+    <div class="container">
+      <div class="location__inner" data-animate>
+        <div class="location__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.4535984262234!2d77.19890237346221!3d28.613938874317316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd281f5e5555%3A0x4d63f7fa7c0b0e0!2sGym!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="location__info">
+          <h2>Visit Us</h2>
+          <p>Delhi NCR, India</p>
+          <div class="location__ctas">
+            <a href="https://wa.me/919XXXXXXXXX?text=Hi%20Coach%20Rahul%2C%20I%27d%20like%20to%20know%20more%20about%20IronEdge%20Gym." class="btn-accent" id="whatsappLocation">
+              <i class="fa-brands fa-whatsapp"></i> Chat with Trainer
+            </a>
+            <a href="tel:+919XXXXXXXXX" class="btn-secondary">
+              <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <i class="fa-solid fa-dumbbell"></i> IronEdge Gym
+        </div>
+        <ul class="footer__links">
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#trainer">About</a></li>
+          <li><a href="#booking">Trial</a></li>
+          <li><a href="#location">Contact</a></li>
+        </ul>
+      </div>
+      <p class="footer__copyright">© 2025 IronEdge Gym. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919XXXXXXXXX?text=Hi%20Coach%20Rahul%2C%20I%27d%20like%20to%20book%20a%20free%20trial." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -231,40 +231,57 @@
     <div class="container">
       <p class="section-label text-center">Patient Reviews</p>
       <h2 class="section-title text-center">What Our Patients Say</h2>
-      <div class="testimonials__scroll" data-animate>
+      <p class="section-subtitle text-center">
+        Real feedback from real patients. We're proud of the care we deliver every day.
+      </p>
+
+      <div class="testimonials__track" data-animate>
+
         <div class="card testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Quick diagnosis, very professional. Felt at ease immediately. Dr. Anjali took the time to explain everything."</p>
-          <div class="testimonial-author">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">
+            "Quick diagnosis, very professional. Felt completely at ease immediately.
+             Dr. Anjali took the time to explain everything in plain language — no jargon."
+          </p>
+          <div class="testimonial-card__author">
             <div class="author-avatar">RS</div>
-            <div>
+            <div class="author-info">
               <strong>Ravi Sharma</strong>
-              <span>Verified Patient</span>
+              <span>Verified Patient · General Consultation</span>
             </div>
           </div>
         </div>
+
         <div class="card testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Dr. Anjali explained everything clearly. The clinic is spotless and the staff is so kind. Highly recommend!"</p>
-          <div class="testimonial-author">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">
+            "Dr. Anjali explained everything clearly. The clinic is spotless and the staff
+             is so kind. I've recommended this clinic to my entire family."
+          </p>
+          <div class="testimonial-card__author">
             <div class="author-avatar">PN</div>
-            <div>
+            <div class="author-info">
               <strong>Priya Nair</strong>
-              <span>Verified Patient</span>
+              <span>Verified Patient · Skin Treatment</span>
             </div>
           </div>
         </div>
+
         <div class="card testimonial-card">
-          <div class="stars">★★★★☆</div>
-          <p>"Excellent skin treatment. Saw visible results in just 2 weeks. The follow-up care was exceptional too."</p>
-          <div class="testimonial-author">
+          <div class="testimonial-card__stars">★★★★☆</div>
+          <p class="testimonial-card__text">
+            "Excellent skin treatment. Saw visible results in just 2 weeks.
+             The follow-up care and reminders were exceptional too."
+          </p>
+          <div class="testimonial-card__author">
             <div class="author-avatar">AP</div>
-            <div>
+            <div class="author-info">
               <strong>Arjun Patel</strong>
-              <span>Verified Patient</span>
+              <span>Verified Patient · Dermatology</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -278,27 +295,43 @@
         <div class="location__map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Clinic Location"></iframe>
+            width="100%"
+            height="360"
+            style="border:0; border-radius: var(--radius);"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="MediCare Clinic Location">
+          </iframe>
         </div>
         <div class="location__info">
           <div class="location__detail">
-            <i class="fa-solid fa-location-dot"></i>
+            <div class="location__icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <strong>Address</strong>
-              <p>12, Health Avenue, Andheri West, Mumbai – 400053</p>
+              <p>12, Health Avenue, Andheri West,<br />Mumbai – 400053, Maharashtra</p>
             </div>
           </div>
+
           <div class="location__detail">
-            <i class="fa-solid fa-clock"></i>
+            <div class="location__icon"><i class="fa-solid fa-clock"></i></div>
             <div>
-              <strong>Hours</strong>
-              <p>Mon – Sat: 9am – 8pm<br />Sunday: 10am – 2pm</p>
+              <strong>Clinic Hours</strong>
+              <p>Mon – Sat: 9:00 am – 8:00 pm<br />Sunday: 10:00 am – 2:00 pm</p>
             </div>
           </div>
+
+          <div class="location__detail">
+            <div class="location__icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Phone</strong>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+
           <div class="location__btns">
-            <a href="https://wa.me/919XXXXXXXXX?text=Hello%2C%20I%20need%20directions%20to%20MediCare%20Clinic."
-               class="btn-accent" target="_blank" rel="noopener">
+            <a href="https://wa.me/919XXXXXXXXX?text=Hello%20MediCare%20Clinic%2C%20I%20need%20directions."
+               class="btn-accent" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-whatsapp"></i> Chat with Us
             </a>
             <a href="tel:+919XXXXXXXXX" class="btn-primary">
@@ -325,8 +358,11 @@
   </footer>
 
   <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/919XXXXXXXXX?text=Hello%20MediCare%20Clinic!%20I'd%20like%20to%20book%20an%20appointment."
-     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919XXXXXXXXX?text=Hello%20MediCare%20Clinic!%20I%27d%20like%20to%20book%20an%20appointment."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
